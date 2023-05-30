@@ -11,7 +11,11 @@
   <script>
     // ジョークを取得する関数
     function getJoke() {
-      // ここにAPIからジョークを取得するためのコードを追加します
+      // APIからジョークを取得
+      fetch('https://api.chucknorris.io/jokes/random')
+        .then(response => response.json())
+        .then(data => displayJoke(data.value))
+        .catch(error => console.log(error));
     }
 
     // ジョークを表示する関数
