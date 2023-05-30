@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ジョークボット</title>
+</head>
+<body>
+  <h1>ジョークボット</h1>
+  <button id="jokeButton">ジョークを表示</button>
+  <div id="jokeArea"></div>
+
+  <script>
+    // ジョークを取得する関数
+    function getJoke() {
+      // ここにAPIからジョークを取得するためのコードを追加します
+    }
+
+    // ジョークを表示する関数
+    function displayJoke(joke) {
+      const jokeArea = document.getElementById("jokeArea");
+      jokeArea.textContent = joke;
+    }
+
+    // ボタンクリック時の処理
+    const jokeButton = document.getElementById("jokeButton");
+    jokeButton.addEventListener("click", function() {
+      getJoke();
+    });
+  </script>
+</body>
+</html>
